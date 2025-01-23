@@ -11,7 +11,7 @@ body {
 
 
 nav {
-    background-color: darkblue;
+    background-color: rgb(54, 54, 58);
     padding: 10px;
 }
 
@@ -43,8 +43,6 @@ main {
     max-width: 840px;
 }
 
-
-
 aside {
     width: 20rem;
     text-align: center;
@@ -53,8 +51,9 @@ aside {
 
 aside h2 {
     position: absolute;
-    top: 47px;
-    left: 150px;
+    top: 5px;
+    left: 100px;
+    font-size: small;
 }
 
 aside img {
