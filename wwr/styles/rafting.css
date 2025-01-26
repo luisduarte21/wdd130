@@ -1,0 +1,124 @@
+/* styles.css */
+
+:root {
+  /* Replace these with your actual color scheme values */
+  --primary-color: #337777;  /* Blue-green */
+  --secondary-color: #f0f0f0; /* Light gray */
+  --accent-color: #f7c243;  /* Orange */
+  --text-color: #333;       /* Dark gray */
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: var(--secondary-color);
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  max-width: 150px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  height: 400px; /* Set a height for the hero section */
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.adventure .image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.adventure .image-gallery img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-media {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-media li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-media a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Remove underlines from social media links */
+.social-media a img {
+  border: none; /* Optional: remove border around image */
+}
