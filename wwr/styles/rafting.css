@@ -2,9 +2,11 @@
 
 :root {
   /* Replace these with your actual color scheme values */
-  --primary-color: #337777;  /* Blue-green */
-  --secondary-color: #f0f0f0; /* Light gray */
-  --accent-color: #f7c243;  /* Orange */
+  --primary-color: #F5D665;  /* Naples yellow */
+  --secondary-color: #89B0AE; /* Cambrige blue */
+  --accent1-color: #21D2E2;  /* Battleship gray */
+  --accent2-color: #21D2E2; /* Robin egg blue */
+  --accent3-color: #075ECF: /* Tang Blue */
   --text-color: #333;       /* Dark gray */
 }
 
