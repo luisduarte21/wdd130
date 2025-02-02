@@ -16,134 +16,248 @@ body {
 }
 
 .container {
-  background-image: "images/hero.webp";
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* Header Styles (Using Grid) */
 header {
   background-color: var(--secondary-color);
+  margin: 1rem auto;
+  display: grid; /* Use Grid for header layout */
+  grid-template-columns: auto auto auto; /* Adjust columns as needed */
+  border-bottom: 1px solid #ccc;
+  max-width: 1000px;
   padding: 20px 0;
+  gap: 20px;   /* Space between elements */
+}
+
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  display: grid;
-  grid-template-columns: 1fr auto;
+  max-width: 960px; /* adjuste as prefrences */
+  margin: 0 auto;
+}
+.logo img {
+	margin: 0 0.25rem 0 1rem;
+	width: 64px;
+	height: auto;
 }
 
-.log img {
-  margin: 0 0.25rem 0
-}
-
-header img {
-  max-width: 150px;
-  align-items: left;
-}
-
-nav {
-  display: flex;
-  justify-content: flex-end;
-}
-nav ul {
-  list-style: none;
+h1 {
+	font-size: 2rem;
+	font-family: Acme, Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  text-align: center;
 }
 
-nav li {
-  margin-left: 20px;
+.navigation {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+  margin: 0;
+  gap: 20px;
 }
 
-nav a {
-  color: var(--text-color);
-  text-decoration: none;
+.navigation li {
+	margin-left: 20px; /* flex: 1 1 auto; */
 }
+
+.navigation a {
+	display: block;
+	color: navy;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.navigation a:hover {
+	color: tomato;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
 
 /* Hero section styles */
 .hero {
   position: relative;
-  text-align: center;  
-  height: 600; /* Height can be adjusted as needed */
+  background-image: url("images/hero.webp"); /* Correct background-image */
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-img {
-  display: block;
-  width: 100%;
-  height: auto;
-
+.hero-content {
+  position: relative;
 }
 
-.hero-text-container {
+.hero-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Headings and paragraphs */
-h1,
-h2 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-p {
-  line-height: 1.5;
-}
-
-/* About section styles */
-.about {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
+  border-radius: 10px;
 }
 
-/*Adventure section styles */
+.hero-text {
+  flex: 1;
+  color: white;
+  margin-right: 20px;
+}
+
+.hero-overlay-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  z-index: 2;
+}
+
+.hero-image {
+  width: 100%;
+}
+/* History Section Styles */
+.history {
+  padding: 40px; /* Add padding around the section */
+  text-align: center; /* Center the heading */
+}
+
+.history-content {
+  max-width: 1000px; /* Limit the width of the content */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.history h2 {
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.three-columns {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+  gap: 20px; /* Spacing between columns */
+  justify-content: center; /* Center the columns horizontally */
+  align-content: center;
+  align-content: normal;
+}
+
+.column {
+  flex: 1 0 28%; /* Each column takes up about 45% of the container */
+  text-align: left; /* Align text to the left within columns */
+}
+
+.column p {
+  text-align: justify;
+}
+
+.image-column { /* Style for the image column */
+  flex: 1 0 auto;  /* Adjust width as needed */
+  text-align: center; /* Center the image horizontally */
+  max-width: 30%;
+}
+
+.image-column img {
+  max-width: 100%; /* Make image responsive */
+  height: auto;
+  display: block; /* Prevents small space below image */
+  margin: 0 auto; /* Center image horizontally */
+  max-height: 300px;
+}
+
+/* Responsive adjustments (Example - adjust as needed) */
+@media (max-width: 768px) {
+  .column {
+      flex: 1 0 90%; /* Stack columns vertically on smaller screens */
+  }
+}
+
+/* Adventure Section Styles (Flexbox for layout) */
 .adventure {
+  padding: 40px 0;
   text-align: center;
 }
 
 .image-gallery {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allows images to wrap */
+  justify-content: center; /* Center the gallery */
+  gap: 20px; /* Add spacing between images */
+}
+
+.image-gallery figure {
+  margin: 0; /* Remove default figure margins */
+  flex: 1 0 200px; /* Key for responsiveness: Adjust 200px as needed */
+  /* flex-basis: 200px;  Alternative to flex: 1 0 200px;*/
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .image-gallery img {
-  width: 200px;
+  max-width: 100%; /* Ensures images scale within their container */
   height: auto;
-  margin-bottom: 20px;
+  display: block; /* Prevents a small space below the image */
 }
 
-/* Solcial media links */
-.social-media a {
-  color: var(--text-color);
-  text-decoration: none;
+.image-gallery figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #777;
 }
 
-.social-media img {
-  width: 10px;
-  height: 10px;
-  margin: 0 100px; /* add some spacing between icons */
+/* Responsive adjustments (Example - adjust as needed) */
+@media (max-width: 768px) {
+  .image-gallery figure {
+      flex: 1 0 30%; /* Two images per row on smaller screens */
+  }
 }
 
-.social-media li {
-  display: inline-block;
-  margin: 0 10px;
+@media (max-width: 480px) {
+  .image-gallery figure {
+      flex: 1 0 45%; /* One image per row on very small screens */
+  }
 }
 
-/* Remove underlines from social media links */
-.social-media a img {
-  border: none; /* Optional: remove border around image */
-}
-
-/* Footer styles */
+/* Footer Styles (Flexbox for Social Media) */
 footer {
   background-color: var(--secondary-color);
   padding: 20px 0;
   text-align: center;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-between; /* Distribute space */
+  align-items: center;
+}
+
+.sociallinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  gap: 20px;
+}
+
+.sociallinks li {
+  margin: 0 10px;
+}
+
+.sociallinks a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.sociallinks img {
+  width: 40px;
+  height: 40px;
 }

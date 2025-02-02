@@ -13,10 +13,13 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="index.html"><img src="images/logo.webp" alt="Company Logo"></a>
+        <div class="header-container"> 
+             <div class="logo">
+             <a href="index.html"><img src="images/logo.webp" alt="Company Logo"></a>
+             </div>
+            <h1>Rafting LLC</h1>
             <nav>
-                <ul>
+                <ul class="navigation">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="trips.html">Trips</a></li>
@@ -26,33 +29,66 @@
         </div>
     </header>
     <main>
-      <div class="hero">
-        <img src="images/hero.webp" alt="White Water Rafting on a River" class="hero-image">
-        <h1>White Water Raftting</h1>
-            <article>
-                <img src="images/rafting20_600.webp" alt="White Water Rafting" class="rafting" width="150" height="100">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, 
-                    mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed 
-                    eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit 
-                    amet elit iaculis pretium sit amet quis manna. Aenean velit odio elementum in tempus ut vehicula eu.</p> 
-            </article>
-      </div> 
+        <section class="hero">
+            <div class="hero-content"> <img src="images/hero.webp" alt="White Water Rafting on a River" class="hero-image">                
+                <h1>White Water Rafting</h1>
+                <div class="hero-overlay"> <article class="hero-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, 
+                            mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed 
+                            eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit 
+                            amet elit iaculis pretium sit amet quis manna. Aenean velit odio elementum in tempus ut vehicula eu.</p> 
+                    </article>
+                    <img src="images/rafting20_600.webp" alt="White Water Rafting" class="rafting hero-overlay-image" width="150" height="100">
+                </div>    
+              </div> 
+        </section>
+     
       <section class="history">
-        <h2>History</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, 
-                mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed 
-                eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit 
-                amet elit iaculis pretium sit amet quis manna. Aenean velit odio elementum in tempus ut vehicula eu.</p> 
+            <div class="history-content">
+                <h2>History</h2>
+                <div class="three-columns">
+                    <div class="column">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, 
+                           mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed 
+                           eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit 
+                           amet elit iaculis pretium sit amet quis manna. Aenean velit odio elementum in tempus ut vehicula eu.</p> 
+                    </div>
+                    <div class="column image-column">  
+                        <img src="images/History.webp" alt="History Image">
+                    </div>
+                    <div class="column">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, 
+                               mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed 
+                               eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit 
+                               amet elit iaculis pretium sit amet quis manna. Aenean velit odio elementum in tempus ut vehicula eu.</p>
+                    </div>
+                </div>
+            </div>        
       </section>
       <section class="adventure">
-            <h2>Adventure Waits You!</h2>
-            <div class="image-gallery">
+        <h2>Adventure Waits You!</h2>
+        <div class="image-gallery">
+            <figure>
                 <img src="images/rafting19_600.webp" alt="Utha river">
+                <figcaption>Los Dientes del Diablo</figcaption> 
+            </figure>
+            <figure>
                 <img src="images/rafting53_600.webp" alt="Colorado river">
+                <figcaption>Big Mallard</figcaption>
+            </figure>
+            <figure>
                 <img src="images/rafting58_600.webp" alt="Washington river">
+                <figcaption>Half Day Adventure</figcaption>
+            </figure>
+            <figure>
                 <img src="images/rafting64_600.webp" alt="Montana river">
+                <figcaption>Wild & Scenic Trip</figcaption>
+            </figure>
+            <figure>
                 <img src="images/rafting65_600.webp" alt="Mexico river">
-            </div>
+                <figcaption>Canyon Expedition</figcaption>
+            </figure>
+        </div>
        </section>
     </main>
     <footer>
