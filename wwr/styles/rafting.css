@@ -30,14 +30,15 @@ header {
   border-bottom: 1px solid #ccc;
   max-width: 1000px;
   padding: 20px 0;
-  gap: 20px;   /* Space between elements */
+  gap: 10px;   /* Space between elements */
+  align-items: center;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 960px; /* adjuste as prefrences */
+  max-width: 1000px; /* adjuste as prefrences */
   margin: 0 auto;
 }
 .logo img {
@@ -233,10 +234,23 @@ h1 {
 footer {
   background-color: var(--secondary-color);
   padding: 20px 0;
-  text-align: center;
+  width: 100%;
+}
+
+.footer-content { /* Styles for the wrapper div */
   display: flex;
-  justify-content: space-between; /* Distribute space */
-  align-items: center;
+  justify-content: flex-end; /* Align to the end (right) */
+  align-items: center; /* Vertically align */
+  max-width: 1200px; /* Or your preferred width */
+  margin: 0 auto; /* Center the footer content */
+  padding: 0 20px;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.footer-text {
+  text-align: center;
+  margin: 0; /* Reset default margins */
+  flex: 1;
 }
 
 .sociallinks {
@@ -244,20 +258,33 @@ footer {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: flex-end; /* Align to the right */
   gap: 20px;
 }
 
-.sociallinks li {
-  margin: 0 10px;
+/* Media query (important for responsiveness) */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+  }
+
+  .footer-text{
+    flex: auto;
+    justify-content: center;
+  }
+
+  .sociallinks {
+    margin-top: 10px;
+    justify-content: center;
+  }
 }
 
-.sociallinks a {
-  color: var(--text-color);
-  text-decoration: none;
+.sociallinks a img { /* Target the images within the links */
+  transition: transform 0.2s ease; /* Add a smooth transition */
 }
 
-.sociallinks img {
-  width: 40px;
-  height: 40px;
+.sociallinks a:hover img {
+  transform: scale(1.1); /* Scale up by 10% on hover */
 }
+
