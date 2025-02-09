@@ -13,6 +13,8 @@ body {
   margin: 0;
   padding: 0;
   color: var(--text-color);
+  width: 960px;
+  margin: 0 auto;
 }
 
 .container {
@@ -83,40 +85,31 @@ h1 {
 /* Hero section styles */
 .hero {
   position: relative;
-  background-image: url("images/hero.webp"); /* Correct background-image */
-  background-size: cover;
-  background-position: center;
-}
+}  
 
+ 
 .hero-content {
   position: relative;
 }
 
-.hero-overlay {
+article {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  width: 80%;
-  max-width: 1200px;
+  width: 90%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
-  border-radius: 10px;
+  color: whitesmoke;
+  border-radius: 20px;
 }
 
-.hero-text {
-  flex: 1;
-  color: white;
-  margin-right: 20px;
-}
 
-.hero-overlay-image {
-  max-width: 300px;
+.hero article img {
+  width: 200px;
   height: auto;
   border-radius: 10px;
+  float: right;
 }
 
 .hero h1 {
@@ -125,10 +118,9 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  z-index: 2;
 }
 
-.hero-image {
+.hero img {
   width: 100%;
 }
 /* History Section Styles */
@@ -147,66 +139,42 @@ h1 {
 }
 
 .three-columns {
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
-  gap: 20px; /* Spacing between columns */
-  justify-content: center; /* Center the columns horizontally */
-  align-content: center;
-  align-content: normal;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
 }
 
-.column {
-  flex: 1 0 28%; /* Each column takes up about 45% of the container */
-  text-align: left; /* Align text to the left within columns */
+.three-columns img {
+  height: 300px;
 }
 
-.column p {
-  text-align: justify;
-}
+/* Gallery */
 
-.image-column { /* Style for the image column */
-  flex: 1 0 auto;  /* Adjust width as needed */
-  text-align: center; /* Center the image horizontally */
-  max-width: 30%;
-}
-
-.image-column img {
-  max-width: 100%; /* Make image responsive */
-  height: auto;
-  display: block; /* Prevents small space below image */
-  margin: 0 auto; /* Center image horizontally */
-  max-height: 300px;
-}
-
-/* Responsive adjustments (Example - adjust as needed) */
-@media (max-width: 768px) {
-  .column {
-      flex: 1 0 90%; /* Stack columns vertically on smaller screens */
-  }
-}
-
-/* Adventure Section Styles (Flexbox for layout) */
-.adventure {
-  padding: 40px 0;
-  text-align: center;
+.adventure h2 {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  color: rgb(24, 16, 16);
 }
 
 .image-gallery {
   display: flex;
-  flex-wrap: wrap; /* Allows images to wrap */
   justify-content: center; /* Center the gallery */
-  gap: 20px; /* Add spacing between images */
+  gap: -1px; /* Add spacing between images */
+
 }
+  
 
 .image-gallery figure {
   margin: 0; /* Remove default figure margins */
-  flex: 1 0 200px; /* Key for responsiveness: Adjust 200px as needed */
-  /* flex-basis: 200px;  Alternative to flex: 1 0 200px;*/
+  /*flex: 1 0 200px; /* Key for responsiveness: Adjust 200px as needed */
+  flex-basis: 200px;
   box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .image-gallery img {
-  max-width: 100%; /* Ensures images scale within their container */
+  max-width: 80%; /* Ensures images scale within their container */
   height: auto;
   display: block; /* Prevents a small space below the image */
 }
@@ -217,18 +185,6 @@ h1 {
   color: #777;
 }
 
-/* Responsive adjustments (Example - adjust as needed) */
-@media (max-width: 768px) {
-  .image-gallery figure {
-      flex: 1 0 30%; /* Two images per row on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .image-gallery figure {
-      flex: 1 0 45%; /* One image per row on very small screens */
-  }
-}
 
 /* Footer Styles (Flexbox for Social Media) */
 footer {
@@ -260,31 +216,6 @@ footer {
   display: flex;
   gap: 20px;
 }
-
-/* Media query (important for responsiveness) */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column; /* Stack vertically */
-    align-items: center; /* Center horizontally */
-    text-align: center;
-  }
-
-  .footer-text{
-    flex: auto;
-    justify-content: center;
-  }
-
-  .sociallinks {
-    margin-top: 10px;
-    justify-content: center;
-  }
-}
-
-.sociallinks a img { /* Target the images within the links */
-  transition: transform 0.2s ease; /* Add a smooth transition */
-}
-
 .sociallinks a:hover img {
-  transform: scale(1.1); /* Scale up by 10% on hover */
-}
-
+  transform: scale(1.1) translateY(-3px); /* Scale up and move slightly up */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
