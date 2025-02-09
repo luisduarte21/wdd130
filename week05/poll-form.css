@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    background: #fff;
+}
+
+header {
+    margin: 0 auto;
+    width: 650px;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h1 {
+    font-family: 'Roboto Slab', sarif;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: navy;
+    text-align: center;
+}
+
+form {
+    width: 650px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    border-radius: 0.5rem;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: .5rem;
+    margin: 1rem 0;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+
+legend {
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5rem;
+    color: navy;
+    font-size: 1.3em;
+}
+
+.column1 {
+    grid-template-columns: 1fr 2fr;
+    margin: 0.5rem 0;
+    align-items: center;
+}
+
+.column2 {
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+label, input, button, select, textarea {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+label {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+input, select, textarea {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+}
+
+button {
+    margin: 1rem;
+    background-color: navy;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    padding: .75rem;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+footer {
+    margin: 1rem;
+    width: 650px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    border-top: 1px solid #ccc;
+}
+
+.form-item {
+    display: grid;
+    align-items: center;
+}
+
+
+
+/* .roboto-<uniquifier> {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
