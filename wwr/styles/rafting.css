@@ -50,7 +50,7 @@ header {
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 1rem;
 	font-family: Acme, Arial, sans-serif;
   margin: 0;
 }
@@ -118,6 +118,7 @@ article {
   left: 50%;
   transform: translateX(-50%);
   color: white;
+  font-size: 2rem;
 }
 
 .hero img {
@@ -137,6 +138,7 @@ article {
   border-radius: 5px;
   padding: 1rem;
 }
+
 
 .team-image-container {
   display: flex;
@@ -348,7 +350,7 @@ button[type="submit"]:hover {
 .image-gallery {
   display: flex;
   justify-content: center; /* Center the gallery */
-  gap: -1px; /* Add spacing between images */
+  gap: 20px; /* Add spacing between images */
 
 }
   
@@ -361,7 +363,7 @@ button[type="submit"]:hover {
 }
 
 .image-gallery img {
-  max-width: 80%; /* Ensures images scale within their container */
+  max-width: 100%; /* Ensures images scale within their container */
   height: auto;
   display: block; /* Prevents a small space below the image */
 }
@@ -378,30 +380,43 @@ footer {
   background-color: var(--secondary-color);
   padding: 20px 0;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
-.footer-content { /* Styles for the wrapper div */
-  display: flex;
-  justify-content: flex-end; /* Align to the end (right) */
-  align-items: center; /* Vertically align */
-  max-width: 1200px; /* Or your preferred width */
-  margin: 0 auto; /* Center the footer content */
+.footer-content {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Adjust columns as needed */
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
   padding: 0 20px;
-  flex-wrap: wrap; /* Allow wrapping if needed */
+  gap: 20px; /* Space between items */
 }
 
 .footer-text {
   text-align: center;
-  margin: 0; /* Reset default margins */
-  flex: 1;
+  margin: 0;
+  grid-column: 2; /* Explicitly place in the center column */
+}
+
+.wireframe-link {
+  color: #000;
+  font-size: medium;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  grid-column: 1; /* Explicitly place in the first column */
 }
 
 .sociallinks {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
+  display: flex; /* Keep flex for social links */
   gap: 20px;
+  grid-column: 3; /* Explicitly place in the last column */
+  justify-content: flex-end; /* Align to the right */
+}
 }
 .sociallinks a:hover img {
   transform: scale(1.1) translateY(-3px); /* Scale up and move slightly up */
