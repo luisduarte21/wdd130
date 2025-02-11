@@ -202,6 +202,7 @@ article {
 }
 
 /* Form Styling */
+/* Form Company Info */
 form {
   width: 100%; /* Form takes full width below */
   margin-top: 20px;
@@ -218,6 +219,10 @@ form {
 .form-company {
     width: 70%; /* Adjust as needed */
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns: info and map */
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .map {
@@ -243,6 +248,7 @@ form {
   border-radius: 5px;
   display: block; /* Prevents small gap below iframe */
 }
+
 fieldset {
   border: 1px solid #ccc;
   padding: 20px;
@@ -314,31 +320,9 @@ button[type="submit"]:hover {
   background-color: darken(var(--accent3-color), 100%); /* Darken color on hover */
 }
 
-/* Form Company Info */
-.form-company {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns: info and map */
-  gap: 20px;
-  margin-top: 20px;
-}
 
-.company-info {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
 
-.company-info h2 {
-  margin-bottom: 10px;
-}
 
-.map iframe {
-  width: 100%;
-  height: 300px; /* Adjust map height as needed */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
 
 /* Gallery */
 
