@@ -203,6 +203,8 @@ article {
 
 /* Form Styling */
 /* Form Company Info */
+
+
 form {
   width: 100%; /* Form takes full width below */
   margin-top: 20px;
@@ -286,24 +288,28 @@ label {
 }
 
 input[type="text"],
-input[type="email"],
-textarea {
+input[type="email"] {
   width: 50%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box; /* Include padding in width calculation */
+  box-sizing: border-box; 
   gap: 5px;
 }
 
 textarea {
-  height: 120px; /* Adjust as needed */
-  resize: vertical; /* Allow vertical resizing */
-  width: 100%;
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 120px; 
+  resize: vertical; 
+  margin-bottom: 15px; 
 }
 
 button[type="submit"] {
-  background-color: var(--secondary-color); /* Use your secondary color */
+  background-color: var(--secondary-color); 
   color: white;
   padding: 12px 20px;
   border: none;
