@@ -1,18 +1,41 @@
 :root {
-  /* Replace these with your actual color scheme values */
-  --primary-color: #F5D665;  /* Naples yellow */
-  --secondary-color: #89B0AE; /* Cambrige blue */
-  --accent1-color: #21D2E2;  /* Battleship gray */
-  --accent2-color: #21D2E2; /* Robin egg blue */
-  --accent3-color: #075ECF: /* Tang Blue */
-  --text-color: #333;       /* Dark gray */
+  /* Palet Colors */
+  /* Primary Colors */
+  --primary-color: #1b4079ff; /* Yale Blue - Use for main headings, strong accents, calls to action */
+  --secondary-color: #73A3B0; /* Air Force Blue - Use for secondary headings, section backgrounds */
+
+  /* Complementary/Accent Colors */
+  --accent-color: #cbdf90ff; /* Mindaro - Use for highlights, buttons, interactive elements */
+  --accent2-color: #a089b0; /* Lavender (if still needed) */
+  --wireframe-link-color: #007bff; /* Example: A standard blue for links */
+  /* Neutral Colors (for backgrounds and text) */
+  --light-background: #f8f8f8; /* Very light gray for main backgrounds */
+  --dark-text: #222222; /* Dark gray for main text on light backgrounds */
+  --light-text: #eee; /* Light gray or off-white for text on dark backgrounds */
+  --white-text: #fff; /* White */
+  --gray-text: #000042; 
+  /* text color */
+  --navy-blue-text: #00006B;
+
+
+  /* Cambridge Blue Variations (for subtle distinctions) */
+  --cambridge-blue: #7f9c96ff; /* Original Cambridge Blue - Use for secondary backgrounds, borders */
+  --cambridge-blue-2: #8fad88ff; /* Slightly lighter Cambridge Blue - Use for even lighter backgrounds, subtle highlights */
+   
+  /* Semantic Colors (for specific elements) */
+   --header-background: var(--secondary-color); /* Air Force Blue for header */
+   --section-background: var(--cambridge-blue-2); /* Lighter Cambridge Blue */
+   --table-background: #f5f5f5; /* Light gray for tables */
+   --link-color: var(--accent-color); /* Mindaro for links */
 }
+
 
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  color: var(--text-color);
+  background-color: var(--light-background);
+  color: var(--dark-text);
   width: 960px;
   margin: 0 auto;
 }
@@ -28,11 +51,11 @@ header {
   background-color: var(--secondary-color);
   margin: 1rem auto;
   display: grid; /* Use Grid for header layout */
-  grid-template-columns: auto auto auto; /* Adjust columns as needed */
+  grid-template-columns: auto 1fr auto; /* Adjust columns as needed */
   border-bottom: 1px solid #ccc;
   max-width: 1000px;
   padding: 20px 0;
-  gap: 10px;   /* Space between elements */
+  gap: 5px;   /* Space between elements */
   align-items: center;
 }
 
@@ -53,6 +76,7 @@ h1 {
 	font-size: 1rem;
 	font-family: Acme, Arial, sans-serif;
   margin: 0;
+  color: var(--gray-text);
 }
 
 .navigation {
@@ -70,13 +94,13 @@ h1 {
 
 .navigation a {
 	display: block;
-	color: navy;
+	color: var(--gray-text);
 	padding: 20px;
 	text-decoration: none;
 }
 
 .navigation a:hover {
-	color: tomato;
+	color: var(--accent-color);
 	font-weight: 700;
 	text-decoration: underline;
 }
@@ -85,11 +109,14 @@ h1 {
 /* Hero section styles */
 .hero {
   position: relative;
+  background-color: var(--secondary-color);
+  color: var(--light-text);
 }  
 
  
 .hero-content {
   position: relative;
+  background-color: rgba(27, 64, 121, 0.5);
 }
 
 article {
@@ -110,6 +137,8 @@ article {
   height: auto;
   border-radius: 10px;
   float: right;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  color: var(--white-text); /* White text on the dark overlay */
 }
 
 .hero h1 {
@@ -117,7 +146,7 @@ article {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
+  color: var(--light-text);
   font-size: 2rem;
 }
 
@@ -130,7 +159,7 @@ article {
   background-color: rgba(0, 0, 0, 0.4);
   width: 80%;
   height: 140px;
-  color: var(--accent2-color);
+  color: var(--light-text);
   position: absolute;
   top: 100px;
   text-align: center;
@@ -151,7 +180,6 @@ article {
   flex-direction: column;
   width: 90px;
   height: auto;
-  padding: auto;
   margin: auto;
   border-radius: 20px;
   
@@ -187,18 +215,100 @@ article {
   height: 300px;
 }
 
+/* Newsletter Signup for index page*/
+.newsletter-signup {
+  padding: 1rem;
+  text-align: center;
+  background-color: #eee; /* Or your preferred background color */
+  margin-bottom: 1rem; /* Add some spacing below */
+}
+
+.newsletter-signup h2 {
+  margin-bottom: 1rem;
+}
+
+.newsletter-signup form {
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+  align-items: center; /* Center the form elements */
+  gap: 10px;
+  max-width: 400px; /* Limit form width */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.newsletter-signup input {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.newsletter-signup button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* About Us (Grid Layout) for index page */
+.about-us {
+  padding: 2rem;
+  background-color: var(--light-background);
+}
+
+.about-us h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 2px;
+}
+
+.grid-item {
+  text-align: center;
+  background-color: var(--cambridge-blue-2); /* Lighter Cambridge Blue for grid items */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  margin: 10px;
+
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 10px;
+}
+
+.grid-item h3 {
+  margin-bottom: 0.5rem;
+  color: var(--navy-blue-text);
+}
+
+.grid-item p {
+  text-align: left; /* Align text to the left */
+  color: var(--navy-blue-text);
+}
+
 /* Form Container */
 .form-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distribute space between company info and map */
-    align-items: flex-start; /* Align items to the top */
-    padding: 1rem;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    margin-top: 0.5rem;
-    gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute space between company info and map */
+  align-items: flex-start; /* Align items to the top */
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-top: 0.5rem;
+  gap: 30px;
 }
 
 /* Form Styling */
@@ -213,23 +323,24 @@ form {
   background-color: #fff;
   border-radius: 8px;
   display: grid;
-  grid-template-columns: 1rf;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
 
 .form-company {
-    width: 70%; /* Adjust as needed */
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns: info and map */
-    gap: 20px;
-    margin-top: 20px;
+   
+  box-sizing: border-box;
+  display: flex;
+  grid-template-columns: 1fr 1fr; /* Two columns: info and map */
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .map {
-    width: 60; /* Adjust as needed */
-    box-sizing: border-box;
+  width: 600px; /* Adjust as needed */
+  box-sizing: border-box;
+  flex: 1;
 }
 
 .company-info {
@@ -237,6 +348,7 @@ form {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  flex: 1;
 }
 
 .company-info h2 {
@@ -251,12 +363,20 @@ form {
   display: block; /* Prevents small gap below iframe */
 }
 
+#whatsappicon {
+  vertical-align: middle; /* Align icon with text */
+  margin-left: 5px;
+}
+
+#company-email a {
+  color: inherit; /* Inherit text color from parent */
+  text-decoration: none; /* Remove underline from email link */
+}
 fieldset {
   border: 1px solid #ccc;
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
   margin: 0;
-  padding: 20px;
 }
 
 legend {
@@ -309,8 +429,8 @@ textarea {
 }
 
 button[type="submit"] {
-  background-color: var(--secondary-color); 
-  color: white;
+  background-color: var(--accent-color); 
+  color: var(--primary-color);
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
@@ -341,7 +461,7 @@ button[type="submit"]:hover {
   display: flex;
   justify-content: center; /* Center the gallery */
   gap: 20px; /* Add spacing between images */
-
+  padding-bottom: 20px;
 }
   
 
@@ -361,13 +481,99 @@ button[type="submit"]:hover {
 .image-gallery figcaption {
   margin-top: 10px;
   font-style: italic;
-  color: #777;
+  color: var(--dark-text);
 }
 
+/* Trip CTA for trip page*/
+.trip-cta {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0f0f0; /* Example background color */
+  margin-bottom: -2rem;
+}
+
+.trip-cta h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-button { /* Style the button (if not already styled) */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent-color); /* Example button color */
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Trip Descriptions for trip page */
+.trip-descriptions {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for trips */
+  gap: 20px;
+}
+
+.trip {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center; /* Center content within each trip */
+  background-color: var(--section-background);
+  color: var(--navy-blue-text);
+}
+
+.trip img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.trip h3 {
+  margin-bottom: 0.5rem;
+}
+
+.trip ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.trip li {
+  margin-bottom: 0.5rem;
+}
+
+
+/* Trip Table for trip page*/
+.trip-table {
+  padding: 2rem;
+  overflow-x: auto; /* Enable horizontal scrolling if table is too wide */
+  background-color: var(--table-background); /* Light gray table background */
+ 
+}
+
+.trip-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.trip-table th, .trip-table td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  text-align: left; /* Align text to the left */
+  color: var(--dark-text); /* Darker text for table cells */
+}
+
+.trip-table th {
+  background-color: #b1d17aff; /* Example table header background */
+  font-weight: bold;
+}
 
 /* Footer Styles (Flexbox for Social Media) */
 footer {
   background-color: var(--secondary-color);
+  color: var(--gray-text); /* White text in footer */
   padding: 20px 0;
   width: 100%;
   margin-bottom: 2rem;
@@ -387,15 +593,25 @@ footer {
   text-align: center;
   margin: 0;
   grid-column: 2; /* Explicitly place in the center column */
+  color: var(--gray-text);
 }
 
 .wireframe-link {
-  color: #000;
+  color: var(--dark-text);
   font-size: medium;
   text-align: left;
   margin: 0;
   padding: 0;
   grid-column: 1; /* Explicitly place in the first column */
+}
+.wireframe-link {
+  color: var(--dark-text); /* Use the new variable */
+  
+}
+
+.wireframe-link:hover {
+  color: #0056b3; /* A slightly darker blue on hover */
+  text-decoration: underline; /* Add underline on hover */
 }
 
 .sociallinks {
@@ -407,7 +623,8 @@ footer {
   grid-column: 3; /* Explicitly place in the last column */
   justify-content: flex-end; /* Align to the right */
 }
-}
+
 .sociallinks a:hover img {
   transform: scale(1.1) translateY(-3px); /* Scale up and move slightly up */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
