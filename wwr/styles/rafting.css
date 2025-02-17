@@ -6,8 +6,8 @@
 
   /* Complementary/Accent Colors */
   --accent-color: #cbdf90ff; /* Mindaro - Use for highlights, buttons, interactive elements */
-  --accent2-color: #a089b0; /* Lavender (if still needed) */
-  --wireframe-link-color: #007bff; /* Example: A standard blue for links */
+  --accent2-color: #a089b0; /* Lavender */
+  --wireframe-link-color: #007bff; /* A standard blue for links */
   /* Neutral Colors (for backgrounds and text) */
   --light-background: #f8f8f8; /* Very light gray for main backgrounds */
   --dark-text: #222222; /* Dark gray for main text on light backgrounds */
@@ -154,7 +154,7 @@ article {
   width: 100%;
 }
 
-/* out team overlay on hero*/
+/* team overlay on hero*/
 .team-background {
   background-color: rgba(0, 0, 0, 0.4);
   width: 80%;
@@ -189,6 +189,7 @@ article {
 .team-members figcaption {
   margin-top: 10px; 
 }
+
 /* History Section Styles */
 .history {
   padding: 40px; 
